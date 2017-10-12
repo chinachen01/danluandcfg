@@ -16,7 +16,7 @@ uploadArchives {
                 artifactId "${mvn.artifactId}"
                 groupId "${mvn.groupId}"
                 packaging "${mvn.packaging}"
-                description "${mvn.desc}"
+                description getDesc()
             }
         }
     }
@@ -28,8 +28,17 @@ task sourcesJar(type: Jar) {
 }
 
 artifacts {
+	println getArtifactId()
     archives file(getArtifactId() + ".aar")
     archives sourcesJar
+}
+
+def getDesc() {
+	def versionFile = file('gradle.properties')
+    def Properties versionProps = new Properties()
+    versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
+
+	return versionProps['desc'].toString();
 }
 
 def getArtifactId() {
