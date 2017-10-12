@@ -1,0 +1,12 @@
+ext.versions = [
+    supportVersion: '25.3.1'
+]
+
+ext.mvn = [
+    mvnName : 'android',
+    mvnPass : 'android123',
+    mvnUrl : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup/',
+    mvnSnapUrl : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup-Snapshots',
+    mvnGroupId : 'com.danlu.lib',
+    mvnPackaging : 'aar'
+]
