@@ -32,18 +32,18 @@ artifacts {
     archives sourcesJar
 }
 
-def getProperties() {
+def getArtifactId() {
 	def versionFile = file('gradle.properties')
     def Properties versionProps = new Properties()
     versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
-}
 
-def getArtifactId() {
-	getProperties['artifactId'].toString();
+	return versionProps['artifactId'].toString();
 }
 
 def getVersionName() {
-    def Properties = getProperties();
+    def versionFile = file('gradle.properties')
+    def Properties versionProps = new Properties()
+    versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
 
     def oldVersionName = versionProps['version'].toString()
     def isSnap = versionProps['isSnap'].toBoolean()
