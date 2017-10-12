@@ -13,7 +13,7 @@ uploadArchives {
 
             pom.project {
                 version getVersionName()
-                artifactId "${mvn.artifactId}"
+                artifactId getArtifactId()
                 groupId "${mvn.groupId}"
                 packaging "${mvn.packaging}"
                 description getDesc()
@@ -28,25 +28,24 @@ task sourcesJar(type: Jar) {
 }
 
 artifacts {
-	println getArtifactId()
     archives file(getArtifactId() + ".aar")
     archives sourcesJar
 }
 
 def getDesc() {
-	def versionFile = file('gradle.properties')
+    def versionFile = file('gradle.properties')
     def Properties versionProps = new Properties()
     versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
 
-	return versionProps['desc'].toString();
+    return versionProps['desc'].toString();
 }
 
 def getArtifactId() {
-	def versionFile = file('gradle.properties')
+    def versionFile = file('gradle.properties')
     def Properties versionProps = new Properties()
     versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
 
-	return versionProps['artifactId'].toString();
+    return versionProps['artifactId'].toString();
 }
 
 def getVersionName() {
