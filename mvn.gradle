@@ -36,11 +36,10 @@ def getProperties() {
 	def versionFile = file('gradle.properties')
     def Properties versionProps = new Properties()
     versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
-    return versionProps;
 }
 
 def getArtifactId() {
-	return getProperties['artifactId'].toString();
+	getProperties['artifactId'].toString();
 }
 
 def getVersionName() {
@@ -73,9 +72,9 @@ def getVersionName() {
         versionProps.store(versionFile.newWriter(), null)
     }
 
-
     if (isSnap) {
         newVersionName += "-SNAPSHOT"
     }
+
     return newVersionName
 }
