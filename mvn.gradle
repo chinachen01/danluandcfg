@@ -3,20 +3,20 @@ apply plugin: 'maven'
 uploadArchives {
     repositories {
         mavenDeployer {
-            snapshotRepository(url: "${mvnSnapUrl}") {
-                authentication(userName: "${mvnName}", password: "${mvnPass}")
+            snapshotRepository(url: "${mvn.snapUrl}") {
+                authentication(userName: "${mvn.name}", password: "${mvn.pass}")
             }
 
-            repository(url: "${mvnUrl}") {
-                authentication(userName: "${mvnName}", password: "${mvnPass}")
+            repository(url: "${mvn.url}") {
+                authentication(userName: "${mvn.name}", password: "${mvn.pass}")
             }
 
             pom.project {
                 version getVersionName()
-                artifactId "${artifactId}"
-                groupId "${mvnGroupId}"
-                packaging "${mvnPackaging}"
-                description "${desc}"
+                artifactId "${mvn.artifactId}"
+                groupId "${mvn.groupId}"
+                packaging "${mvn.packaging}"
+                description "${mvn.desc}"
             }
         }
     }
@@ -28,7 +28,7 @@ task sourcesJar(type: Jar) {
 }
 
 artifacts {
-    archives file("${artifactId}.aar")
+    archives file("${mvn.artifactId}.aar")
     archives sourcesJar
 }
 
