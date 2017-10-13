@@ -1,36 +1,32 @@
-println "=================== config.gradle START ==================="
-
 ext.versions = [
-    // google support lib
-    appcompat:'25.3.1',
-    constraint:'1.0.2',
-    junit:'4.12',
-    espresso:'2.2.2',
+        // google support lib
+        appcompat : '25.3.1',
+        constraint: '1.0.2',
+        junit     : '4.12',
+        espresso  : '2.2.2',
 
-    // third party lib
+        // third party lib
 
-    // danlu support lib
+        // danlu support lib
 ]
 
-ext.build = [
-    // 子库的applicationId
-    applicationId : 'com.danlu.mobile',
+ext.appConfig = [
+        // 子库的applicationId
+        applicationId    : 'com.danlu.mobile',
 
-    // 主项目、子库的通用编译配置
-    minSdkVersion : 14,
-    targetSdkVersion : 25,
-    compileSdkVersion : 25,
-    buildToolsVersion : '25.0.3',
-    gradleVersion : '2.3.3',
+        // 主项目、子库的通用编译配置
+        minSdkVersion    : 14,
+        targetSdkVersion : 25,
+        compileSdkVersion: 25,
+        buildToolsVersion: '25.0.3',
+        gradleVersion    : '2.3.3',
 ]
 
 ext.mvn = [
-    name : 'android',
-    pass : 'android123',
-    url : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup/',
-    snapUrl : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup-Snapshots',
-    groupId : 'com.danlu.lib',
-    packaging : 'aar'
+        name     : 'android',
+        pass     : 'android123',
+        url      : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup/',
+        snapUrl  : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup-Snapshots',
+        groupId  : 'com.danlu.lib',
+        packaging: 'aar'
 ]
-
-println "=================== config.gradle END ==================="
