@@ -1,0 +1,36 @@
+apply plugin: 'AndResGuard'
+
+//repositories {
+//    flatDir {
+//        dirs 'libs' //this way we can find the .aar file in libs folder
+//    }
+//}
+
+// wechat opensource compress task wuhaiyang
+andResGuard {
+    mappingFile = null
+    use7zip = false
+    useSign = true
+    keepRoot = false
+
+    // add <yourpackagename>.R.drawable.icon into whitelist.
+    // because the launcher will get the icon with his name
+    whiteList = [
+            "R.mipmap.ic_launcher",
+
+            // growingio
+            "R.string.growingio_project_id",
+            "R.string.growingio_url_scheme"
+    ]
+
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "resources.arsc"
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.6'
+    }
+}
