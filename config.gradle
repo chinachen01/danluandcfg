@@ -6,8 +6,6 @@ ext.versions = [
         espresso  : '2.2.2',
 
         // third party lib
-
-        // danlu support lib
 ]
 
 ext.appConfig = [
@@ -17,8 +15,8 @@ ext.appConfig = [
         // 主项目、子库的通用编译配置
         minSdkVersion    : 14,
         targetSdkVersion : 25,
-        compileSdkVersion: 25,
-        buildToolsVersion: '25.0.3',
+        compileSdkVersion: 26,
+        buildToolsVersion: '26.0.2',
 ]
 
 ext.mvn = [
