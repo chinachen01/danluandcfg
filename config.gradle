@@ -1,8 +1,8 @@
 ext.libVersions = [
         // google support lib
         appcompat : '26.1.0',
-        constraint: '1.0.1',
-        multidexLibraryVersion : '1.0.2',
+        constraint: '1.0.2',
+        multidexLibraryVersion : '1.0.1',
 
         // test lib version
         junitVersion : '4.12',
