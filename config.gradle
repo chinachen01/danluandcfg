@@ -1,6 +1,6 @@
 ext.versions = [
         // google support lib
-        appcompat : '25.3.1',
+        appcompat : '26.1.0',
         constraint: '1.0.2',
         junit     : '4.12',
         espresso  : '2.2.2',
