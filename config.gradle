@@ -5,11 +5,9 @@ ext.versions = [
         multidexLibraryVersion : '1.0.2',
 
         // test lib version
-        junit     : '4.12',
         junitVersion : '4.12',
         runnerVersion : '1.0.1',
         mockitoCoreVersion : '2.11.0',
-        espresso  : '2.2.2',
         espressoCoreVersion : '2.2.2',
 
         // ------- third party lib
