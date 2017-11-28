@@ -23,6 +23,7 @@ ext.libVersions = [
         arouterApiVersion : '1.2.4',
         arouterCompilerVersion : '1.1.4',
         growingio : '1.1.1@aar',
+        expandLayout : '2.9.2',
 
         // jxs
         flowlayoutVersion : '1.0.3',
