@@ -26,7 +26,7 @@ ext.libVersions = [
 
         // jxs
         flowlayoutVersion : '1.0.3',
-        pinyinVersion : '2.0.3',
+        pinyinVersion : '1.0.0',
         glideVersion : '3.8.0',
         ok3interationVersion : '1.5.0@aar',
         lubanVersion : '1.1.3',
