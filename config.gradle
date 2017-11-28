@@ -1,4 +1,4 @@
-ext.versions = [
+ext.libVersions = [
         // google support lib
         appcompat : '26.1.0',
         constraint: '1.0.2',
