@@ -39,6 +39,7 @@ ext.libVersions = [
         rxjava : '1.3.0',
         okhttp3 : '3.8.1',
         rxandroid : '1.2.1',
+        rxlifecycle : '1.0',
         retrofit2 : '2.3.0',
         persistentCookie : 'v1.0.1',
 ]
