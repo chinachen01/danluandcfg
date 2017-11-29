@@ -42,6 +42,9 @@ ext.libVersions = [
         rxlifecycle : '1.0',
         retrofit2 : '2.3.0',
         persistentCookie : 'v1.0.1',
+
+        // danlu-qrcode
+        zxing:'3.3.0',
 ]
 
 ext.appConfig = [
