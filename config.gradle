@@ -44,7 +44,10 @@ ext.libVersions = [
         persistentCookie : 'v1.0.1',
 
         // danlu-qrcode
-        zxing:'3.3.0',
+        zxing : '3.3.0',
+
+        // danlu-view
+        gson : '2.8.0',
 ]
 
 ext.appConfig = [
