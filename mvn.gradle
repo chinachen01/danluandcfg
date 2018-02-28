@@ -1,0 +1,88 @@
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            snapshotRepository(url: "${mvn.snapUrl}") {
+                authentication(userName: "${mvn.name}", password: "${mvn.pass}")
+            }
+
+            repository(url: "${mvn.url}") {
+                authentication(userName: "${mvn.name}", password: "${mvn.pass}")
+            }
+
+            pom.project {
+                version getVersionName()
+                artifactId getArtifactId()
+                groupId "${mvn.groupId}"
+                packaging "${mvn.packaging}"
+                description getDesc()
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives file(getArtifactId() + ".aar")
+    archives sourcesJar
+}
+
+def getDesc() {
+    def versionFile = file('gradle.properties')
+    def Properties versionProps = new Properties()
+    versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
+
+    return versionProps['desc'].toString();
+}
+
+def getArtifactId() {
+    def versionFile = file('gradle.properties')
+    def Properties versionProps = new Properties()
+    versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
+
+    return versionProps['artifactId'].toString();
+}
+
+def getVersionName() {
+    def versionFile = file('gradle.properties')
+    def Properties versionProps = new Properties()
+    versionProps.load(new InputStreamReader(new FileInputStream(versionFile), "utf-8"))
+
+    def oldVersionName = versionProps['version'].toString()
+    def isSnap = versionProps['isSnap'].toBoolean()
+
+    def versions = oldVersionName.split("\\.")
+    def one = versions[0].toInteger()
+    def two = versions[1].toInteger()
+    def three = versions[2].toInteger()
+
+    if (three + 1 == 100) {
+        two += 1
+        three = 0
+    } else {
+        three += 1
+    }
+
+    if (two == 100) {
+        one += 1
+        two = 0
+    }
+
+    def newVersionName = one + "." + two + "." + three
+    def runTasks = gradle.startParameter.taskNames
+    if ('uploadArchives' in runTasks) {
+        versionProps['version'] = newVersionName
+        versionProps.store(versionFile.newWriter(), null)
+    }
+
+    if (isSnap) {
+        newVersionName += "-SNAPSHOT"
+    }
+
+    return newVersionName
+}

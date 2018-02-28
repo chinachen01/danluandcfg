@@ -1,0 +1,29 @@
+ext.versions = [
+        // google support lib
+        appcompat : '25.3.1',
+        constraint: '1.0.2',
+        junit     : '4.12',
+        espresso  : '2.2.2',
+
+        // third party lib
+]
+
+ext.appConfig = [
+        // 子库的applicationId
+        applicationId    : 'com.danlu.mobile',
+
+        // 主项目、子库的通用编译配置
+        minSdkVersion    : 14,
+        targetSdkVersion : 25,
+        compileSdkVersion: 26,
+        buildToolsVersion: '26.0.2',
+]
+
+ext.mvn = [
+        name     : 'android',
+        pass     : 'android123',
+        url      : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup/',
+        snapUrl  : 'http://nexus.idanlu.com/nexus/content/repositories/AndroidGroup-Snapshots',
+        groupId  : 'com.danlu.lib',
+        packaging: 'aar'
+]
