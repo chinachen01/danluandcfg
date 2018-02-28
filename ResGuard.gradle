@@ -31,6 +31,6 @@ andResGuard {
             "resources.arsc"
     ]
     sevenzip {
-        artifact = 'com.tencent.mm:SevenZip:1.2.6'
+        artifact = 'com.tencent.mm:SevenZip:1.2.9'
     }
 }
