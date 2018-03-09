@@ -12,7 +12,6 @@ ext.libVersions = [
 
         // 3rd part lib version
         // zdd
-        pinyin4jVersion : '2.5.1',
         eventbusVersion : '3.0.0',
         rxpermissionsVersion : '0.9.4@aar',
         ultraPtrVersion : '1.0.11',
@@ -23,17 +22,21 @@ ext.libVersions = [
         arouterApiVersion : '1.2.4',
         arouterCompilerVersion : '1.1.4',
         growingio : '1.1.1@aar',
-        expandLayout : '2.9.2',
+        expandLayout : '2.9.2', //net.cachapa.expandablelayout:expandablelayout
+        
+
 
         // jxs
         flowlayoutVersion : '1.0.3',
-        pinyinVersion : '1.0.0',
         glideVersion : '3.8.0',
         ok3interationVersion : '1.5.0@aar',
         lubanVersion : '1.1.3',
         butterknifeVersion : '8.8.1',
         umengVersion : '6.1.2',
         analyticsVersion : '6.1.2',
+
+        // common
+        pinyinVersion : '2.0.3',
 
         // danlu-net
         rxjava : '1.3.0',
