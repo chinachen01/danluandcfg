@@ -9,7 +9,7 @@ apply plugin: 'AndResGuard'
 // wechat opensource compress task wuhaiyang
 andResGuard {
     mappingFile = null
-    use7zip = false
+    use7zip = true
     useSign = true
     keepRoot = false
 
@@ -34,5 +34,4 @@ andResGuard {
         artifact = 'com.tencent.mm:SevenZip:1.2.12'
     }
 
-    finalApkBackupPath = "${project.rootDir}/final.apk"
 }
