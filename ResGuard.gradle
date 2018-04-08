@@ -31,6 +31,8 @@ andResGuard {
             "resources.arsc"
     ]
     sevenzip {
-        artifact = 'com.tencent.mm:SevenZip:1.2.9'
+        artifact = 'com.tencent.mm:SevenZip:1.2.12'
     }
+
+    finalApkBackupPath = "${project.rootDir}/final.apk"
 }
