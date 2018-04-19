@@ -34,6 +34,7 @@ ext.libVersions = [
         butterknifeVersion : '8.8.1',
         umCommon : '1.5.0',
         umAnalytics : '7.5.0',
+        walle : '1.1.6',
 
         // danlu-net
         rxjava : '1.3.0',
