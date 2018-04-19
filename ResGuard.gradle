@@ -3,7 +3,7 @@ apply plugin: 'AndResGuard'
 // wechat opensource compress task wuhaiyang
 andResGuard {
     mappingFile = null
-    use7zip = false
+    use7zip = true
     useSign = true
     keepRoot = false
 
