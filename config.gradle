@@ -25,7 +25,7 @@ ext.libVersions = [
         expandLayout : '2.9.2', //net.cachapa.expandablelayout:expandablelayout
         vlayout : '1.2.9.2@aar',
         resguard:'1.2.12',
-
+        walle: '1.1.6',
 
         // jxs
         flowlayoutVersion : '1.0.3',
