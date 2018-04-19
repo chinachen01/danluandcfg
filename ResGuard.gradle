@@ -1,11 +1,5 @@
 apply plugin: 'AndResGuard'
 
-//repositories {
-//    flatDir {
-//        dirs 'libs' //this way we can find the .aar file in libs folder
-//    }
-//}
-
 // wechat opensource compress task wuhaiyang
 andResGuard {
     mappingFile = null
@@ -31,6 +25,6 @@ andResGuard {
             "resources.arsc"
     ]
     sevenzip {
-        artifact = 'com.tencent.mm:SevenZip:1.2.9'
+        artifact = 'com.tencent.mm:SevenZip:1.2.12'
     }
 }
