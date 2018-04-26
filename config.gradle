@@ -1,6 +1,6 @@
 ext.libVersions = [
         // google support lib
-        constraint: '1.0.2',
+        constraint: '1.1.0',
         supportLibraryVersion : '26.1.0',
         multidexLibraryVersion : '1.0.2',
 
