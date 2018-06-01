@@ -1,8 +1,8 @@
 ext.libVersions = [
         // google support lib
-        constraint: '1.0.2',
-        supportLibraryVersion : '26.1.0',
-        multidexLibraryVersion : '1.0.2',
+        constraint: '1.1.0',
+        supportLibraryVersion : '27.1.1',
+        multidexLibraryVersion : '1.0.3',
 
         // test lib version
         junitVersion : '4.12',
@@ -24,7 +24,7 @@ ext.libVersions = [
         growingio : '2.3.1@aar',
         expandLayout : '2.9.2', //net.cachapa.expandablelayout:expandablelayout
         vlayout : '1.2.9.2@aar',
-        resguard:'1.2.12',
+        resguard:'1.2.13',
         walle: '1.1.6',
 
         // jxs
@@ -61,8 +61,8 @@ ext.appConfig = [
         // 主项目、子库的通用编译配置
         minSdkVersion    : 15,
         targetSdkVersion : 25,
-        compileSdkVersion: 26,
-        buildToolsVersion: '26.0.2',
+        compileSdkVersion: 27,
+        buildToolsVersion: '27.0.3',
         javaVersion : JavaVersion.VERSION_1_8
 ]
 
