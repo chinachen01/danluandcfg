@@ -3,6 +3,7 @@ ext.libVersions = [
         constraint: '1.1.0',
         supportLibraryVersion : '27.1.1',
         multidexLibraryVersion : '1.0.3',
+        lifecycleVersion : '1.1.1',
 
         // test lib version
         junitVersion : '4.12',
@@ -24,6 +25,7 @@ ext.libVersions = [
         arouterCompilerVersion : '1.1.4',
         growingio : '2.3.1@aar',
         expandLayout : '2.9.2',
+        flexbox: '1.0.0',
 
         // jxs
         flowlayoutVersion : '1.0.3',
