@@ -74,8 +74,8 @@ def getVersionName() {
     }
 
     def newVersionName = one + "." + two + "." + three
-    def runTasks = gradle.startParameter.taskNames
-    if ('uploadArchives' in runTasks) {
+    def runTasks = gradle.startParameter.taskNames.toString()
+    if (runTasks.contains('uploadArchives')) {
         versionProps['version'] = newVersionName
         versionProps.store(versionFile.newWriter(), null)
     }
