@@ -21,7 +21,7 @@ ext.libVersions = [
         yijipayVersion : '1.4.2',
         arouterApiVersion : '1.2.4',
         arouterCompilerVersion : '1.1.4',
-        growingio : '2.3.1@aar',
+        growingio : 'autotrack-2.6.8@aar',
         expandLayout : '2.9.2', //net.cachapa.expandablelayout:expandablelayout
         vlayout : '1.2.9.2@aar',
         resguard:'1.2.13',

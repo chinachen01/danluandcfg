@@ -19,8 +19,7 @@ andResGuard {
             "R.mipmap.ic_launcher",
 
             // growingio
-            "R.string.growingio_project_id",
-            "R.string.growingio_url_scheme"
+            "R.string.growingio*",
     ]
 
     compressFilePattern = [
