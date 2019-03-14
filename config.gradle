@@ -60,7 +60,7 @@ ext.appConfig = [
         applicationId    : 'com.danlu.mobile',
 
         // 主项目、子库的通用编译配置
-        minSdkVersion    : 15,
+        minSdkVersion    : 21,
         targetSdkVersion : 26,
         compileSdkVersion: 28,
         buildToolsVersion: '28.0.3',
